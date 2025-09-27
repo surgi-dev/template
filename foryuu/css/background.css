@@ -1,0 +1,85 @@
+:root {
+  --senja1: #883c77;
+  --senja2: #8b2e57;
+  --senja3: #b63c47;
+  --senja4: #ff7443;
+  --senja5: #ff8643;
+  --senja6: #ff9e44;
+  --senja7: #ffd143;
+  --senja8: #ffff4c;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--senja1),
+    var(--senja2),
+    var(--senja4),
+    var(--senja6)
+  );
+  background-size: 400% 400%;
+  animation: gradient-animasi 20s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes gradient-animasi {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 60%;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  opacity: 0;
+  animation: shoot 10s linear infinite;
+}
+
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  transform-origin: left;
+  transform: translateX(-100%) rotate(45deg);
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px) translateY(1000px) rotate(-45deg);
+    opacity: 0;
+  }
+}

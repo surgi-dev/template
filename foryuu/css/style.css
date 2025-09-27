@@ -1,0 +1,308 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: poopins sans-serif;
+  letter-spacing: 1px;
+}
+.halaman1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  width: 300px;
+  height: 200px;
+  background-color: #ffffff09;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translate(-50% -50%);
+  position: absolute;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.halaman1 .btn {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 150px;
+  height: 30px;
+  background-color: #00000050;
+  transition: all 0.3s ease-in-out;
+}
+
+.halaman1 .btn:hover {
+  transform: scale(1.1);
+  background-color: #00000090;
+}
+
+.halaman2 {
+  width: 90vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff09;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 8px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translate(-50% -50%);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Mencegah interaksi saat disembunyikan */
+  transform: scale(0.9); /* Sedikit efek zoom out saat hilang */
+}
+
+.content1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+}
+
+.content2 {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  padding-top: 10vh;
+  margin: 0px 5px;
+  align-items: center;
+}
+
+.l1 {
+  animation: love1 3s ease infinite;
+}
+.l3 {
+  animation: love1 3.5s ease infinite;
+}
+.l5 {
+  animation: love1 3s ease infinite;
+}
+.l2 {
+  animation: love2 3s ease infinite;
+}
+.l4 {
+  animation: love2 3.5s ease infinite;
+}
+@keyframes love1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes love2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.content2 h1 {
+  height: 10%;
+}
+
+.content2 .typing-container {
+  margin: 10px;
+  height: 60%;
+  white-space: pre-wrap;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* Animasi Kursor Berkedip (Blink) */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.typing-container .finished {
+  animation: blink 0.75s step-end infinite;
+}
+
+.ay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 100%;
+}
+.ay img {
+  position: absolute;
+  padding-bottom: 18px;
+}
+.ay h1 {
+  width: 100%;
+  height: 50%;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #ff00d4, #fd005d, #d400ff);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: text-animation 2s infinite linear;
+}
+@keyframes text-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.gift {
+  background-color: transparent;
+  border: none;
+  height: 40%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  animation: wiggle 0.6s infinite alternate;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.halaman3 {
+  width: 90vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff09;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 8px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translate(-50% -50%);
+  position: absolute;
+  overflow: hidden;
+  perspective: 1000px;
+  text-align: center;
+}
+
+.gambar1 {
+  height: 10vh;
+  width: 90vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gambar1 h3 {
+  position: absolute;
+}
+.gambar1 .senyum {
+  padding-top: 8vh;
+}
+.gambar2 {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation-container {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  perspective: 800px;
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: cubeRotate 20s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.cube-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000050;
+}
+
+.front {
+  transform: translateZ(100px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes cubeRotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.gambar3 {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
